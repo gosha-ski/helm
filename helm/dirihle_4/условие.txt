@@ -1,0 +1,8 @@
+U=y*sin(x)
+
+delta U + U = 0
+
+U(0,y) = 0
+U(1,y) = y*sin(1)
+U(x,0) = 0
+U(x,1) = sin(x)

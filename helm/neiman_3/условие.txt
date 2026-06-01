@@ -1,0 +1,8 @@
+U = sin(PI*x) * cos(PI*y)
+
+delta U + 2*PI*PI*U = 0
+
+U_x(0,y) = PI*cos(PI*y)
+U(1,y) = 0
+U(x,0) = sin(PI*x)
+U(x,1) = -sin(PI*x)

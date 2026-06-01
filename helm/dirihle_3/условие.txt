@@ -1,0 +1,7 @@
+delta U - (4+PI^2)U= -2 * PI^2 * e^(2x) *sin(PI*y)
+U(0,y) = sin(PI*y) 
+U(1,y) = e^2 * sin(Pi*y) 
+U(x,0)=0 
+U(x,1)=0
+
+U = e^(2x) * sin(PI*y)

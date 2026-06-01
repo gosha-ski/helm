@@ -1,0 +1,9 @@
+delta U + (PI^2 + 2)*U = 4 * (y-0.5)^2 * exp(-(y-0.5)^2) * cos(PI*x)
+
+U(0,y) = exp(-(y-0.5)^2)
+U(1,y) = -1 * exp(-(y-0.5)^2)
+U(x,0) = exp(-0.25) * cos(PI*x)
+U(x,1) = exp(-0.25) * cos(PI*x)
+
+
+U = exp(-(y-0.5)^2) * cos(PI*x)

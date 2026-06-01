@@ -1,0 +1,4 @@
+(x,y) : [0;1] [0;1]
+delta U + (PI^2)*U = 0 
+U(0,y)=0 U(1,y)=sin(PI*y) U(x,0)=0 U(x,1)=0
+U=x*sin(PI*y)
