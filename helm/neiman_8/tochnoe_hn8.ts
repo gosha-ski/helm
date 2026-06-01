@@ -5,7 +5,7 @@ const PI = Math.PI;
 
 
 function reshenie(x: number, y: number) {
-	return x*x* Math.sin(PI*y);
+	return Math.exp(y)*Math.sin(PI*x);
 }
 
 

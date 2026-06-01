@@ -1,4 +1,4 @@
-const Nx = 10, Ny = 10;
+const Nx = 20, Ny = 20;
 const hx = 1 / Nx, hy = 1 / Ny;
 const F = 0;
 const U = 1;
@@ -112,3 +112,51 @@ logArr(arrU)
 f()
 
 logArr(arrU)
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+function reshenie(x: number, y: number) {
+	return Math.exp(-1*(y-0.5)*(y-0.5))*Math.cos(PI*x);
+}
+
+function fillArray(arr: number[][]){
+	for(let j=0; j<arr.length; j++){
+        for(let i=0; i<arr[j].length; i++){
+            arr[j][i] = reshenie(0+i*hx, 0+j*hy) 
+            
+        }
+    }
+}
+
+
+const arrReshenie = initArray(Nx, Ny)
+
+for(let j=0; j<=Ny; j++){
+	for(let i=0; i<=Nx; i++){
+		arrReshenie[j][i]=0;
+	}
+}
+
+
+fillArray(arrReshenie)
+
+
+function relativeError(arr1: number[][], arrTochnoe: number[][]){
+	const resArr = initArray(Nx, Ny)
+	for(let i=0; i<arr1.length; i++){
+		for(let j=0; j<arr1[i].length; j++){
+			resArr[i][j] = Math.abs(arr1[i][j]-arrTochnoe[i][j]) / Math.abs(arrTochnoe[i][j]);
+			
+		}
+	}
+	return resArr;
+}
+
+const errorArr = relativeError(arrU, arrReshenie)
+logArr(errorArr)

@@ -5,10 +5,10 @@ const U = 1;
 const a = 1, b = 1;
 const A = 1, B = 1;
 const PI = Math.PI;
-const kvadrat_k = PI*PI;
+const kvadrat_k = PI*PI-1;
 
 function Fij(x: number, y: number) {
-	return 2*Math.sin(PI*y);
+	return 0;
 }
 
 function initArray(Nx: number, Ny: number){
@@ -38,12 +38,12 @@ const newArrU = initArray(Nx, Ny)
 
 // U_x (0,y)
 function gran(x: number, y: number){
-	return 0;
+	return PI*Math.exp(y);
 }
 
 
 function gran_R(x: number, y: number){
-	return 2*Math.sin(PI*y);
+	return -1*PI*Math.exp(y);
 }
 
 //краевой случай U(0, y)
@@ -58,12 +58,12 @@ function Uxy_1_y(x: number, y: number){
 
 //краевой случай U(x, 0)
 function Uxy_x_0(x: number, y: number){
-	return 0;
+	return Math.sin(PI*x);
 }
 
 //краевой случай U(x, 1)
 function Uxy_x_1(x: number, y: number){
-	return 0;
+	return Math.exp(1)*Math.sin(PI*x);
 }
 
 
@@ -149,7 +149,7 @@ logArr(arrU)
 
 
 function reshenie(x: number, y: number) {
-	return x*x*Math.sin(PI*y);
+	return Math.exp(y)*Math.sin(PI*x);
 }
 
 function fillArray(arr: number[][]){
